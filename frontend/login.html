@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <!-- Navbar principal -->
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <i class="bi bi-shop me-2"></i>
+                Sistema de Gestión
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="container col-lg-4 col-md-6">
+
+            </div>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Menú Productos -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-box-seam me-1"></i>Productos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" id="listarProductos">Listar Productos</a></li>
+                            <li><a class="dropdown-item" href="#" id="buscarProducto">Buscar Producto</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#" id="crearProducto">Crear Producto</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Menú Usuarios -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-people me-1"></i>Usuarios
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" id="listarUsuarios">Listar Usuarios</a></li>
+                            <li><a class="dropdown-item" href="#" id="buscarUsuario">Buscar Usuario</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#" id="registrarUsuario">Registrar Usuario</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Menú Pedidos -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-cart3 me-1"></i>Pedidos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" id="listarPedidos">Listar Pedidos</a></li>
+                            <li><a class="dropdown-item" href="#" id="buscarPedido">Buscar Pedido</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#" id="crearPedido">Crear Pedido</a></li>
+                        </ul>
+                    </li>
+                    
+                    </div>
+                    <div class="nav-item ms-auto me-3">
+                        <!-- Carrito a la derecha -->
+                        <div class="d-flex align-items-center">
+                            <a class="nav-link text-white" href="#" role="button">
+                                <i class="bi bi-cart fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container  mt-4 justify-content-center">
+        <div class="card text-center" id="mensaje">        </div>
+    </div>
+    <!-- Contenedor principal para el contenido dinámico -->
+    <main class="container mt-4">
+        <div class="row justify-content-center align-items-center min-vh-50">
+            <div class="col-md-6 text-center">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="mb-4">Inicia sesión</h2>
+                        <p class="text-muted">Si aún no tienes una cuenta, haz click <a href="./sign-up.html">aquí</a></p>
+                    </div>
+                    
+                </div>
+                <form class="card align-items-center mt-4">
+                    <div class="mb-3 container-fluid row">
+                      <label for="inputName" class="form-label">Nombre de Usuario
+                        <input type="text" class="form-control" id="inputName" aria-describedby="nameHelp" required>
+                      </label>
+                    </div>
+                
+                    <div class="mb-3 container-fluid row">
+                      <label for="inputPassword" class="form-label">Contraseña
+                        <input type="password" class="form-control" id="inputPassword" required>
+                      </label>
+                    </div>
+
+                    <div class="mb-3 content">
+                        <button type="button" class="btn btn-primary" id="btnLogin">Iniciar Sesión</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script/login.js"></script>
+</body>
+</html>
